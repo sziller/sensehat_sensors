@@ -28,7 +28,7 @@ class EnvironmentalReadings:
     In order to work as intended, user needs a RaspberryPi with a SenseHat mounted.
     Each instance measures the set of data according to users choice, and scrolls these on the LED Display.
     ============================================================================================== by Sziller ==="""
-    def __init__(self, low_light: bool = True):
+    def __init__(self, low_light: bool = True, **kwargs):
         self.sense                  = SenseHat()
         self.sense.low_light        = low_light
 
