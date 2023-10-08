@@ -81,8 +81,8 @@ class EnvironmentalReadings:
         self.measure_sensehat_env_data()
         self.show_data(pointer=-1)
 
-    def write_data_to_disc(self, db_session):
-        pass
+    def return_data(self):
+        return 42
 
     def measure_sensehat_env_data(self):
         """=== Method name: measure_sensehat_env_data ==================================================================
