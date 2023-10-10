@@ -14,9 +14,9 @@ except ImportError as e1:
     except ImportError as e2:
         raise DiEr.MissingDisplay()
 
-print("===========================")
-print("= using: {:^16} =".format({True: "SenseHat", False: "Emulator"}[LIVE]))
-print("===========================")
+print("====================================")
+print("= Sensors using: {:^17} =".format({True: "SenseHat", False: "Emulator"}[LIVE]))
+print("====================================")
 
 
 class EnvironmentalReadings:
@@ -82,7 +82,8 @@ class EnvironmentalReadings:
         self.show_data(pointer=-1)
 
     def return_data(self):
-        return 42
+        self.measure_sensehat_env_data()
+        return self.sensehat_measurements_list[-1]
 
     def measure_sensehat_env_data(self):
         """=== Method name: measure_sensehat_env_data ==================================================================
